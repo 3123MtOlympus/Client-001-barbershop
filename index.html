@@ -8,7 +8,7 @@
     <title>atdBarbershop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    
 </head>
 
 <body>
@@ -54,45 +54,88 @@
     </main>
 
 
-        <section class="sectionReviews" id="reviews">
-            <div class="container my-5">
-                <h2 class="text-center mb-4">Customer Reviews</h2>
-                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Londo Christopher</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><i>July 12, 2024</i></h6>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+    <section class="sectionReviews" id="reviews">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Customer Reviews</h2>
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Existing reviews go here -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Londo Christopher</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted"><i>July 12, 2024</i></h6>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="card-text">T's been my barber for over a decade. His work has always been on point! This is an amazing service! Highly recommend to everyone looking for a barber in the 805.</p>
                                     </div>
-                                    <p class="card-text">T's been my barber for over a decade. His work has always been on point! This is an amazing service! Highly recommend to everyone looking for a barber in the 805.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Jacob</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted"><i>July 15, 2024</i></h6>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="card-text">Great experience and wonderful support. Will use again!</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jacob</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><i>July 15, 2024</i></h6>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p class="card-text">Great experience and wonderful support. Will use again!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add more carousel items here for additional reviews -->
                     </div>
+                    <!-- Add more carousel items here for additional reviews -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <h3 class="text-center mt-5">Add Your Review</h3>
+            <form id="reviewForm" class="mt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="stars" class="form-label">Number of Stars</label>
+                    <select class="form-control" id="stars" required>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+                    
+                    
                     <!-- <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>

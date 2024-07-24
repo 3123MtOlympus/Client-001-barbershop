@@ -84,14 +84,15 @@ html {
         border: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 0 auto;
-        width: 50%;
+        width: 40%;
         font-family: 'Times New Roman', Times, serif;text-align: center;
        
     }
 
     .card-title{
-        font-family: ;
+    
     }
+
     /* .carousel-control-prev-icon,
     .carousel-control-next-icon {
         background-color: rgba(0, 0, 0, 0.174);
@@ -99,3 +100,13 @@ html {
         width: 50%;
     } */
 
+    .star-rating {
+        color: #FFD700; /* Gold color for stars */
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+    }
