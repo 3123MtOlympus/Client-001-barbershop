@@ -69,3 +69,13 @@ document.getElementById('reviewForm').addEventListener('submit', function (e) {
     // Reset form
     document.getElementById('reviewForm').reset();
 });
+
+// Add event listener for "See More" buttons
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('show-more')) {
+        const cardBody = e.target.closest('.card-body');
+        cardBody.style.overflow = 'visible';
+        cardBody.style.webkitLineClamp = 'none';
+        e.target.style.display = 'none';
+    }
+});
