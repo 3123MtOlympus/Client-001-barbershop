@@ -13,7 +13,7 @@
 
 <body>
     <!-- NAV BAR -->
-    <header>
+    <!-- <header>
         <nav class="navbar">
             <ul class="nav nav-pills">
                 <li class="nav-item">
@@ -37,11 +37,19 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <!-- HOME -->
     <main class="Services">
+              
+        <div class="container">
+            <div class="video-background">
+                <video autoplay muted loop id="reviews-background-video">
+                    <source src="/asset/images/videos/bg2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
            
+            </div>
         <h1>Attention to <span>Detail</span> Barbershop</h1>
     
     <!-- SERVICE SECTION -->
@@ -78,6 +86,24 @@
             </div>
         </div>
 
+        <!-- Modal for confirmation -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Review Posted</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your review has been posted successfully!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <div class="addReview">
             <h3 class="text-center mt-5">Add Your Review</h3>
             <form id="reviewForm" class="mt-4">
@@ -111,21 +137,18 @@
     <!-- BOOKING SECTION -->
     <section class="booking-section" id="bookAppointment">
       
-        <div class="container">
-            <div class="video-background">
-                <video autoplay muted loop id="reviews-background-video">
-                    <source src="/asset/images/videos/Copy of Attention to Details Barbershop is dedicated to providing unparalleled craftsmanship and personalized grooming experiences. With a commitment to precision, professionalism, and customer sa (1).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-           
-            </div>
+       
             <h2 class="text-center">Book Your Appointment</h2>
             <p class="text-center">Choose one of the booking options below to schedule your appointment:</p>
             <div class="booking-buttons text-center">
                 <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn-booking btn-calendly">Book with Calendly</a>
                 <a href="https://booksy.com/your-booksy-link" target="_blank" class="btn-booking btn-booksy">Book with Booksy</a>
             </div>
+
             <!-- Contact Me Container -->
+
+            <div class="container">
+
         <div class="contact-me">
             <h3 class="text-center mt-5">Contact Us</h3>
             <p class="text-center">Follow us on social media:</p>

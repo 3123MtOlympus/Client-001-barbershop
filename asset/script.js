@@ -96,3 +96,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.getElementById('reviewForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    const stars = document.getElementById('stars').value;
+    const message = document.getElementById('message').value;
+
+    const starIcons = '<i class="fas fa-star"></i>'.repeat(stars) + '<i class="far fa-star"></i>'.repeat(5 - stars);
+
+    const newReview = `
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><i>${date}</i></h6>
+                    <div class="star-rating">${starIcons}</div>
+                    <p class="card-text">${message}</p>
+                    <button class="show-more">See More</button>
+                </div>
+            </div>
+        </div>`;
+
+    const newItem = document.createElement('div');
+    newItem.classList.add('carousel-item');
+    newItem.innerHTML = newReview;
+
+    const firstCarouselItem = document.querySelector('.carousel-inner .carousel-item');
+    firstCarouselItem.insertAdjacentElement('beforebegin', newItem);
+
+    // Reset form fields
+    document.getElementById('reviewForm').reset();
+
+    // Add event listener for the "See More" button
+    newItem.querySelector('.show-more').addEventListener('click', function () {
+        const cardBody = this.closest('.card-body');
+        cardBody.style.overflow = 'visible';
+        cardBody.style.webkitLineClamp = 'none';
+        this.style.display = 'none';
+    });
+});
+
+// Add event listener for the initial "See More" buttons
+document.querySelectorAll('.show-more').forEach(button => {
+    button.addEventListener('click', function () {
+        const cardBody = this.closest('.card-body');
+        cardBody.style.overflow = 'visible';
+        cardBody.style.webkitLineClamp = 'none';
+        this.style.display = 'none';
+    });
+});
+
+// Show confirmation modal
+const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+confirmationModal.show();

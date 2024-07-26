@@ -9,6 +9,7 @@ html {
     overflow-y: auto;
     /* Allows vertical scrolling */
 }
+
 h1 {
     text-align: center;
     color: white;
@@ -20,6 +21,7 @@ h1 {
     color: whitesmoke;
     text-shadow: 2px 2px 5px goldenrod;
 }
+
 /* Navbar */
 .navbar {
     position: relative;
@@ -30,6 +32,7 @@ h1 {
     padding: 10px 20px;
     width: 100%;
 }
+
 .nav-link active {
     background-color: burlywood;
 }
@@ -72,43 +75,54 @@ h1 {
 
 /* Review Section */
 .reviews-container {
-    position: relative;
+    position: absolute;
     padding: 70px 20px;
-    background: rgba(0, 0, 0, 0.775); /* Semi-transparent background */
-    color: white; /* Ensure text is visible on dark background */
+    background: rgba(0, 0, 0, 0.775);
+    /* Semi-transparent background */
+    color: white;
+    /* Ensure text is visible on dark background */
 }
 
 .sectionReviews {
     width: 100%;
-  
+
 }
 
 .review-scroll-container {
-    max-height: 500px; /* Adjust height as needed */
+    max-height: 500px;
+    /* Adjust height as needed */
     overflow-y: auto;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for visibility */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for visibility */
     border-radius: 5px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for review cards */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background for review cards */
 }
 
 .review-card {
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for review cards */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for review cards */
     border-radius: 5px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for individual reviews */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly transparent background for individual reviews */
 }
 
 /* Ensure text in review cards is readable */
-.review-card h5, .review-card h6, .review-card p {
+.review-card h5,
+.review-card h6,
+.review-card p {
     color: white;
 }
 
 /* Review Section with Video Background */
 .reviews-container {
-    position: relative;
+    /* margin: 0 auto; */
+    position: sticky;
     padding: 70px 20px;
     overflow: hidden;
+    max-width: 100%;
     /* Hide overflow to ensure the video doesn't affect layout */
 }
 
@@ -124,10 +138,11 @@ h1 {
 }
 
 #reviews-background-video {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     width: 100%;
+    
     height: 100%;
     object-fit: cover;
     /* Ensure the video covers the container */
@@ -138,15 +153,15 @@ h1 {
     position: relative;
     /* Ensure it is positioned above the video background */
     z-index: 1;
-    
-    padding: 20px;
-   
+    width: 100%;
+    padding: 10px;
+
 }
 
 .addReview {
     position: absolute;
     padding: 20px;
- 
+
 }
 
 .sectionReviews,
@@ -194,32 +209,35 @@ h1 {
 
 /* Add Review Form */
 #reviewForm {
-    width: 50%;
+    width: 100%;
     /* Adjust width to fit in the container */
     margin: 0 auto;
-    background-color: rgba(164, 116, 43, 0.665);
+    background-color: rgba(37, 35, 33, 0.253);
     padding: 20px;
     color: #fff;
     font-weight: bolder;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
 /* Service Section */
+
 .serviceSection {
     display: flex;
     justify-content: space-around;
     padding: 0;
     gap: 5px;
     margin: 0 auto;
+    height: 500px;
 }
 
 .image-card {
-    width: 25%;
+    margin: auto;
+    width: 55%;
     position: relative;
     transition: transform 0.3s;
     cursor: pointer;
-  
+
 }
 
 .image-card img {
@@ -323,28 +341,33 @@ main,
 
 /* Contact Me Container */
 .contact-me {
-height: auto;
+    height: auto;
     margin-top: 40px;
     padding: 10px;
-    background: #f9f9f9; /* Light background for the contact section */
+    background: #f9f9f9;
+    /* Light background for the contact section */
     border-radius: 8px;
 }
 
 .social-media-links {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between icons */
+    gap: 15px;
+    /* Space between icons */
     margin-top: 15px;
 }
 
 .social-icon {
-    font-size: 24px; /* Size of the social media icons */
-    color: #333; /* Default color for icons */
+    font-size: 24px;
+    /* Size of the social media icons */
+    color: #333;
+    /* Default color for icons */
     transition: color 0.3s;
 }
 
 .social-icon:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
+    /* Change color on hover */
 }
 
 .social-icon i {
