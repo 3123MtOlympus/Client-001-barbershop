@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
     <title>atdBarbershop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
 </head>
 
 <body>
@@ -17,26 +18,28 @@
         <nav class="navbar">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#bookAppointment" role="button" aria-expanded="false" id="dropdown-btn">Services</a>
-                  <ul class="dropdown-content" id="dropdown-menu">
-                    <li><a class="dropdown-item" href="#bookHairCut">Haircuts</a></li>
-                    <li><a class="dropdown-item" href="#bookBeardCare">Beard Care</a></li>
-                    <li><a class="dropdown-item" href="#bookLineUp">Line Up</a></li>
-                    
-                    <li><a class="dropdown-item" href="#bookAppointment">Book Appointment</a></li>
-                  </ul>
-                </li><li class="nav-item">
-                    <a class="nav-link" href="#reviews">Reviews</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#bookAppointment">Book Appointment</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#bookAppointment" role="button"
+                        aria-expanded="false" id="dropdown-btn">Services</a>
+                    <ul class="dropdown-content" id="dropdown-menu">
+                        <li><a class="dropdown-item" href="#bookHairCut">Haircuts</a></li>
+                        <li><a class="dropdown-item" href="#bookBeardCare">Beard Care</a></li>
+                        <li><a class="dropdown-item" href="#bookLineUp">Line Up</a></li>
+
+                        <li><a class="dropdown-item" href="#bookAppointment">Book Appointment</a></li>
+                    </ul>
                 </li>
-                
-              </ul>
-              
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#bookAppointment">Book Appointment</a>
+                </li>
+
+            </ul>
+
         </nav>
     </header>
 
@@ -50,64 +53,69 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <section class="sectionHome" id="home"></section>
     </main>
 
+    <!-- SERVICE SECTION -->
 
-    <section class="sectionReviews" id="reviews">
-        <div class="container my-5">
-            <h2 class="text-center mb-4">Customer Reviews</h2>
-            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Existing reviews go here -->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Londo Christopher</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted"><i>July 12, 2024</i></h6>
-                                        <div class="star-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <p class="card-text">T's been my barber for over a decade. His work has always been on point! This is an amazing service! Highly recommend to everyone looking for a barber in the 805.</p>
-                                        <button class="show-more"><i>See More<i></button>
+    <section class="serviceSection" id="services">
+        <div class="image-card" id="card1">
+            <a href="#bookHairCut">
+                <img src="asset/images/1.png" alt="Image 1">
+            </a>
+        </div>
+        <div class="image-card" id="card2">
+            <a href="#bookBeardCare">
+                <img src="asset/images/2.png" alt="Image 2">
+            </a>
+        </div>
+        <div class="image-card" id="card3">
+            <a href="#bookLineUp">
+                <img src="asset/images/4.png" alt="Image 3">
+            </a>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEW SECTION-->
+
+    <section class="reviews-container">
+        <div class="sectionReviews" id="reviews">
+            <div class="container my-5">
+                <h2 class="text-center mb-4">Customer Reviews</h2>
+                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner d-flex justify-content-center">
+                        <!-- Existing reviews go here -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jacob</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><i>July 15, 2024</i></h6>
+                                    <div class="star-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Jacob</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted"><i>July 15, 2024</i></h6>
-                                        <div class="star-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <p class="card-text">Great experience and wonderful support. Will use again!</p>
-                                    </div>
+                                    <p class="card-text">Great experience and wonderful support. Will use again!</p>
+                                    <button class="show-more">See More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Add more carousel items here for additional reviews -->
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+               
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+    
+        <div class="addReview">
             <h3 class="text-center mt-5">Add Your Review</h3>
             <form id="reviewForm" class="mt-4">
                 <div class="mb-3">
@@ -135,30 +143,22 @@
                 <button type="submit" class="btn btn-primary">Submit Review</button>
             </form>
         </div>
-                    
-                    
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button> -->
-                </div>
-            </div>
-            
-            
-        </section>
-
-
-
+    </section>
     
+
+
+       
+
+
+
+
+    <script src="/asset/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 
 </body>
 
-<script src="/asset/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    
+
 </html>

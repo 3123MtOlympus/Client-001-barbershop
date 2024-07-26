@@ -79,3 +79,15 @@ document.addEventListener('click', function (e) {
         e.target.style.display = 'none';
     }
 });
+
+
+//Select Img Function
+document.addEventListener('DOMContentLoaded', () => {
+    const imageCards = document.querySelectorAll('.image-card');
+    imageCards.forEach(card => {
+        card.addEventListener('click', () => {
+            imageCards.forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+        });
+    });
+});
