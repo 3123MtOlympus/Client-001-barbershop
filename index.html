@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 
 <body>
@@ -24,10 +23,9 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#bookAppointment" role="button"
                         aria-expanded="false" id="dropdown-btn">Services</a>
                     <ul class="dropdown-content" id="dropdown-menu">
-                        <li><a class="dropdown-item" href="#bookHairCut">Haircuts</a></li>
-                        <li><a class="dropdown-item" href="#bookBeardCare">Beard Care</a></li>
-                        <li><a class="dropdown-item" href="#bookLineUp">Line Up</a></li>
-
+                        <li><a class="dropdown-item" href="#bookAppointment">Haircuts</a></li>
+                        <li><a class="dropdown-item" href="#bookAppointment">Beard Care</a></li>
+                        <li><a class="dropdown-item" href="#bookAppointment">Line Up</a></li>
                         <li><a class="dropdown-item" href="#bookAppointment">Book Appointment</a></li>
                     </ul>
                 </li>
@@ -37,84 +35,49 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#bookAppointment">Book Appointment</a>
                 </li>
-
             </ul>
-
         </nav>
     </header>
 
     <!-- HOME -->
-    <main>
-        <div class="video-background">
-            <video autoplay muted loop id="background-video">
-                <source
-                    src="/asset/images/videos/Copy of Attention to Details Barbershop is dedicated to providing unparalleled craftsmanship and personalized grooming experiences. With a commitment to precision, professionalism, and customer sa (1).mp4"
-                    type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </main>
-
+    <main class="Services">
+           
+        <h1>Attention to <span>Detail</span> Barbershop</h1>
+    
     <!-- SERVICE SECTION -->
-
+    
     <section class="serviceSection" id="services">
+        
         <div class="image-card" id="card1">
-            <a href="#bookHairCut">
-                <img src="asset/images/1.png" alt="Image 1">
+            <a href="#bookAppointment">
+                <img src="asset/images/1.png" alt="Haircuts">
             </a>
         </div>
         <div class="image-card" id="card2">
-            <a href="#bookBeardCare">
-                <img src="asset/images/2.png" alt="Image 2">
+            <a href="#bookAppointment">
+                <img src="asset/images/2.png" alt="Beard Care">
             </a>
         </div>
         <div class="image-card" id="card3">
-            <a href="#bookLineUp">
-                <img src="asset/images/4.png" alt="Image 3">
+            <a href="#bookAppointment">
+                <img src="asset/images/3.png" alt="Line Up">
             </a>
         </div>
     </section>
+</main>
 
-    <!-- CUSTOMER REVIEW SECTION-->
-
+    <!-- CUSTOMER REVIEW SECTION -->
     <section class="reviews-container">
         <div class="sectionReviews" id="reviews">
-            <div class="container my-5">
-                <h2 class="text-center mb-4">Customer Reviews</h2>
-                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner d-flex justify-content-center">
-                        <!-- Existing reviews go here -->
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jacob</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><i>July 15, 2024</i></h6>
-                                    <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <p class="card-text">Great experience and wonderful support. Will use again!</p>
-                                    <button class="show-more">See More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <h3 class="text-center mt-5">Customer Reviews</h3>
+                    
+            <div class="review-scroll-container">
+                <div class="review-list">
+                   <!-- Reviews will be dynamically added here -->
                 </div>
-               
-            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            </div>
         </div>
-    
-    
+
         <div class="addReview">
             <h3 class="text-center mt-5">Add Your Review</h3>
             <form id="reviewForm" class="mt-4">
@@ -144,21 +107,53 @@
             </form>
         </div>
     </section>
-    
 
+    <!-- BOOKING SECTION -->
+    <section class="booking-section" id="bookAppointment">
+      
+        <div class="container">
+            <div class="video-background">
+                <video autoplay muted loop id="reviews-background-video">
+                    <source src="/asset/images/videos/Copy of Attention to Details Barbershop is dedicated to providing unparalleled craftsmanship and personalized grooming experiences. With a commitment to precision, professionalism, and customer sa (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+           
+            </div>
+            <h2 class="text-center">Book Your Appointment</h2>
+            <p class="text-center">Choose one of the booking options below to schedule your appointment:</p>
+            <div class="booking-buttons text-center">
+                <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn-booking btn-calendly">Book with Calendly</a>
+                <a href="https://booksy.com/your-booksy-link" target="_blank" class="btn-booking btn-booksy">Book with Booksy</a>
+            </div>
+            <!-- Contact Me Container -->
+        <div class="contact-me">
+            <h3 class="text-center mt-5">Contact Us</h3>
+            <p class="text-center">Follow us on social media:</p>
+            <div class="social-media-links text-center">
+                <a href="https://facebook.com/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    </section>
 
-       
-
-
-
-
+    <!-- Scripts -->
     <script src="/asset/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </body>
-
 
 </html>
