@@ -9,10 +9,16 @@ html {
     overflow-y: auto;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
     color: white;
-   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    text-shadow: 2px 2px #361d1d46;
 }
 
 .Services {
@@ -179,12 +185,13 @@ h1 {
 }
 
 /* Service Section */
-.select{
+.select {
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
     font-size: 50px;
     text-align: center;
 }
+
 .serviceSection {
     display: flex;
     justify-content: space-around;
@@ -296,7 +303,7 @@ main,
 
 /* Contact Me Container */
 .contact-me {
-    height: auto;
+    height: 100%;
     margin-top: 40px;
     padding: 10px;
     background: #f9f9f9;
@@ -329,76 +336,44 @@ main,
     width: 100%;
 }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+    .reviews-container, .addReview, .booking-section {
+        padding: 50px 15px;
+    }
 
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
+    .booking-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-container, .addReview, .booking-section {
+        padding: 40px 10px;
+    }
+
+    .booking-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-booking {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews-container, .addReview, .booking-section {
+        padding: 30px 5px;
+    }
+
+    .booking-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .btn-booking {
+        width: 100%;
+    }
+}

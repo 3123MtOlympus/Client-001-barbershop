@@ -18,38 +18,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add Review Function
-    document.getElementById('reviewForm').addEventListener('submit', (e) => {
-        e.preventDefault();
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const date = document.getElementById('date').value;
-        const stars = document.getElementById('stars').value;
-        const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const stars = document.getElementById('stars').value;
+            const message = document.getElementById('message').value;
 
-        const starIcons = '<i class="fas fa-star"></i>'.repeat(stars) + '<i class="far fa-star"></i>'.repeat(5 - stars);
+            const starIcons = '<i class="fas fa-star"></i>'.repeat(stars) + '<i class="far fa-star"></i>'.repeat(5 - stars);
 
-        const newReview = `
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">${name}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">${date}</h6>
-                        <div class="star-rating">${starIcons}</div>
-                        <p class="card-text">${message}</p>
+            const newReview = `
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${name}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">${date}</h6>
+                            <div class="star-rating">${starIcons}</div>
+                            <p class="card-text">${message}</p>
+                            <button class="show-more">See More</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        `;
+                </div>`;
 
-        // Add new review to the review list
-        const reviewList = document.querySelector('.review-list');
-        if (reviewList) {
-            reviewList.insertAdjacentHTML('beforeend', newReview);
-        }
+            const newItem = document.createElement('div');
+            newItem.classList.add('carousel-item');
+            newItem.innerHTML = newReview;
 
-        // Reset form
-        document.getElementById('reviewForm').reset();
-    });
+            const firstCarouselItem = document.querySelector('.carousel-inner .carousel-item');
+            if (firstCarouselItem) {
+                firstCarouselItem.insertAdjacentElement('beforebegin', newItem);
+            }
+
+            // Reset form fields
+            reviewForm.reset();
+
+            // Add event listener for the "See More" button
+            newItem.querySelector('.show-more').addEventListener('click', showMoreHandler);
+        });
+    }
 
     // Load and Display Static Reviews
     const reviews = [
@@ -69,21 +78,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h5 class="card-title">${review.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"><i>${review.date}</i></h6>
                 <div class="star-rating">${'★'.repeat(review.stars)}</div>
-                <p class="card-text">${review.text}</p>
-            `;
+                <p class="card-text">${review.text}</p>`;
             reviewList.appendChild(reviewCard);
         });
     }
 
     // Expand Review Text
+    function showMoreHandler(e) {
+        const cardBody = e.target.closest('.card-body');
+        if (cardBody) {
+            cardBody.style.overflow = 'visible';
+            cardBody.style.webkitLineClamp = 'none';
+            e.target.style.display = 'none';
+        }
+    }
+
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('show-more')) {
-            const cardBody = e.target.closest('.card-body');
-            if (cardBody) {
-                cardBody.style.overflow = 'visible';
-                cardBody.style.webkitLineClamp = 'none';
-                e.target.style.display = 'none';
-            }
+            showMoreHandler(e);
         }
     });
 
@@ -95,61 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('selected');
         });
     });
+
+    // Show confirmation modal
+    const confirmationModalElement = document.getElementById('confirmationModal');
+    if (confirmationModalElement) {
+        const confirmationModal = new bootstrap.Modal(confirmationModalElement);
+        confirmationModal.show();
+    }
 });
-
-
-document.getElementById('reviewForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const date = document.getElementById('date').value;
-    const stars = document.getElementById('stars').value;
-    const message = document.getElementById('message').value;
-
-    const starIcons = '<i class="fas fa-star"></i>'.repeat(stars) + '<i class="far fa-star"></i>'.repeat(5 - stars);
-
-    const newReview = `
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${name}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><i>${date}</i></h6>
-                    <div class="star-rating">${starIcons}</div>
-                    <p class="card-text">${message}</p>
-                    <button class="show-more">See More</button>
-                </div>
-            </div>
-        </div>`;
-
-    const newItem = document.createElement('div');
-    newItem.classList.add('carousel-item');
-    newItem.innerHTML = newReview;
-
-    const firstCarouselItem = document.querySelector('.carousel-inner .carousel-item');
-    firstCarouselItem.insertAdjacentElement('beforebegin', newItem);
-
-    // Reset form fields
-    document.getElementById('reviewForm').reset();
-
-    // Add event listener for the "See More" button
-    newItem.querySelector('.show-more').addEventListener('click', function () {
-        const cardBody = this.closest('.card-body');
-        cardBody.style.overflow = 'visible';
-        cardBody.style.webkitLineClamp = 'none';
-        this.style.display = 'none';
-    });
-});
-
-// Add event listener for the initial "See More" buttons
-document.querySelectorAll('.show-more').forEach(button => {
-    button.addEventListener('click', function () {
-        const cardBody = this.closest('.card-body');
-        cardBody.style.overflow = 'visible';
-        cardBody.style.webkitLineClamp = 'none';
-        this.style.display = 'none';
-    });
-});
-
-// Show confirmation modal
-const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-confirmationModal.show();
