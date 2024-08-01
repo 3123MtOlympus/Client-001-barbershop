@@ -1,28 +1,29 @@
-ATTENTION TO DETAIL Barbershop Website
+# ATTENTION TO DETAIL Barbershop Website
 
-Welcome to the atdBarbershop website repository. This project is designed to provide an engaging and interactive online presence for atdBarbershop, showcasing services, reviews, and booking options.
+Welcome to the Attention to Detail Barbershop website repository. This project is designed to provide an engaging and interactive online presence for atdBarbershop, showcasing services, reviews, and booking options.
 
-Table of Contents
-Introduction
-Features
-Technologies Used
-Setup
-Usage
-Contributing
-License
-Contact
+### Table of Contents
+##### Introduction
+##### Features
+##### Technologies Used
+##### Setup
+##### Usage
+##### Contributing
+##### License
+##### Contact
 
-Introduction
-The atdBarbershop website offers a modern and user-friendly interface that allows visitors to learn about available services, read customer reviews, and book appointments online. The website is designed with a video background, interactive image cards for services, and social media links for easy connectivity.
+## Introduction
+The Attention to Detail Barbershop website offers a modern and user-friendly interface that allows visitors to learn about available services, read customer reviews, and book appointments online. The website is designed with a video background, interactive image cards for services, and social media links for easy connectivity.
 
-Features
+## Features
 Video Background: Captivating video background on the homepage.
 Service Cards: Interactive image cards linking to booking options.
 Reviews Section: Display customer reviews and allow users to add new reviews.
 Booking Section: Direct links to Calendly and Booksy for easy appointment booking.
 Contact Information: Easy access to contact details and social media links.
 Navbar Dropdown: Toggleable dropdown menu for easy navigation.
-Technologies Used
+
+## Technologies Used
 HTML5
 CSS3
 JavaScript (ES6)
@@ -31,37 +32,46 @@ Font Awesome
 Setup
 Clone the repository
 
+<code>
 bash
 Copy code
-git clone https://github.com/3123mtolympus/atdBarbershop.git
-cd atdBarbershop
+git clone https://github.com/3123mtolympus/client-001-barbershop.git
+cd client-001-barbershop
 Open index.html in your browser
+</code>
 
+<code>
 bash
 Copy code
 open index.html
-Usage
-Navigation: Use the navigation bar to browse different sections of the website.
+</code>
+
+## Usage
+### Navigation: Use the navigation bar to browse different sections of the website.
 Services: Click on the service cards to book an appointment.
 Reviews: Read customer reviews or add your own review using the form.
 Booking: Use the provided links to book an appointment via Calendly or Booksy.
 Contact: Find contact information and follow atdBarbershop on social media.
-Contributing
-Contributions are welcome! Please follow these steps to contribute:
 
+
+## Contributing
+Contributions are welcome! Please follow these steps to contribute:
+<code>
 Fork the repository.
 Create a new branch (git checkout -b feature/YourFeature).
 Commit your changes (git commit -m 'Add some feature').
 Push to the branch (git push origin feature/YourFeature).
 Open a pull request.
-License
+</code>
+
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+## Contact
 For questions or suggestions, please reach out to:
 
 Email: your-email@example.com
-Website: atdBarbershop
+Website: [barbershop](https://3123mtolympus.github.io/Client-001-barbershop/)
 Facebook: Attention to Detail Barbershop
 Twitter: @attentiontodetailbarber
 Instagram: @attentiontodetailbarber
