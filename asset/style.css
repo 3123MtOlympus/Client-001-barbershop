@@ -192,32 +192,39 @@ h2 {
     text-align: center;
 }
 
+/* Service Section */
 .serviceSection {
     display: flex;
-    justify-content: space-around;
-    padding: 0;
-    gap: 5px;
-    margin: 0 auto;
-    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .image-card {
-    margin: auto;
-    width: 55%;
-    position: relative;
-    transition: transform 0.3s;
-    cursor: pointer;
+    flex: 1 1 calc(33.333% - 10px); /* 3 cards per row with a 10px gap */
+    margin: 5px 0; /* Reduce margin to minimize space between cards */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 .image-card img {
-    width: 75%;
+    width: 100%;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 3px 5px 13px rgb(165, 144, 42);
+    display: block;
+    border-radius: 10px;
 }
 
 .image-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .image-card {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin: 10px 0; /* Ensure some space between stacked cards */
+    }
 }
 
 .image-card.selected {
